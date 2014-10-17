@@ -1,0 +1,20 @@
+<!DOCUMENT html>
+<html>
+	<head>
+		<script type="text/javascript">
+			//DOM - document object model
+			function testDom()
+			{
+				var obj = document.getElementById("parr");
+				//alert(obj); //this tells which kind of object you are working on.
+				obj.innerHTML = "This is a different paragraph";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="cont">
+			<p id="parr">This is some text</p>
+		</div>
+		<input type="button" onclick="testDom();" value="test1"/>
+	</body>
+</html>
