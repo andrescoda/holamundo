@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Table of contents - Link relationship example</title>  
+</head>
+<body>
+ <pre><code class="language-perl">
+# read in the named file in its entirety
+sub slurp {
+  my $filename = shift;
+  my $file     = new FileHandle $filename;
+ 
+  if ( defined $file ) {
+    local $/;
+    return <$file>;
+  }
+  return undef;
+};
+</code></pre>
+</body>
+</html>

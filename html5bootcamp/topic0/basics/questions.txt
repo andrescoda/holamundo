@@ -1,0 +1,27 @@
+HTML VALIDATION:
+
+- What happens when a browser parses invalid HTML?
+When a browser parses invalid HTML it will render it anyway and it will interpret code as they are able to.
+
+- What is the problem with this?
+The main problem with this is that each browser will render our pages differently.
+
+- Will using a frameset in a document validated against the HTML 4 Strict doctype generate an error?
+
+
+THE HTML HEAD
+
+- Why does it make sense to add a description in a meta element if it doesn’t get displayed on the screen?
+The description will be displayed as the text below the link in search engine results
+
+- What is the benefit of adding JavaScript to the head of a document and not in the body?
+The benefit is that you make sure that your JavaScript is available before the main document loads
+
+- How can you benefit from your browser’s caching and what do you need to do to make it work for you?
+the next time you access the site, the files will be on your computer already, meaning they don't need to be downloaded again
+
+- As search engines give the title of a document much love, wouldn’t it be useful to cram it full of relevant keywords? What are the downsides of this practice?
+
+
+- As the title display can be a bit boring, wouldn’t it make sense to bold some words with a b element? Is that possible?
+It makes sence but's not possible, yet.
