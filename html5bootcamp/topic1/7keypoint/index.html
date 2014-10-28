@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<title>Topic 1: JavaScript Intro and jQuery (1 day)</title>  
+	<meta charset="utf-8">
+	<meta name="description" content="Globant - HTML5 bootcamp - Topic 1: JavaScript Intro and jQuery (1 day) - Andrés Coda trainning">
+	<meta name="keywords" content="JavaScript, jQuery, Globant, bootcamp, Globant bootcamp, Andrés Coda, trainning">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">	
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<div id="background">
+
+		<div id="container">
+			<h2>Hello World</h2>
+			
+			<form>
+				<input type="text" name="name" id="name" value="" class="alias textbox" />  
+  				<input class="button" type="button" value="keypoint 7" id="testButton" />
+			</form>
+		<!--end #container -->
+		</div>
+
+	<script>
+		$(window).ready(function() {
+			$('#background').fadeIn(3700); /*fadeIn rate in milliseconds. A higher number = slower fadeIn*/
+			$( ".alias" ).focus();
+		});		
+	</script>
+
+	<script>
+		$("#testButton").click(function(){
+		    /*alert("Show this message");*/
+		    $.ajax({
+				  url: "http://bootcamp.aws.af.cm/welcome/andrescoda",
+				  context: document.body
+				}).done(function() {
+				  $( this ).addClass( "done" );
+				  console.log("test");
+				});
+		  });
+	</script>
+
+	<!--end #background -->
+	</div>
+</body>
+</html>
