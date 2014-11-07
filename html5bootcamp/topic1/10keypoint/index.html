@@ -20,11 +20,14 @@
 			
 			<form>
 				<input type="text" name="nameTest" id="nameTest" value="" class="alias textbox" />  
-  				<input class="button" type="button" value="keypoint 7" id="testButton" />
+  				<input class="button" type="button" value="keypoint 10" id="testButton" />
 			</form>
+			<div id="highlight">
+			</div>
 		<!--end #container -->
 		</div>
 
+		
 	<script>
 		$(window).ready(function() {
 			$('#background').fadeIn(3700); /*fadeIn rate in milliseconds. A higher number = slower fadeIn*/
@@ -35,17 +38,30 @@
 	<script>
 		$("#testButton").click(function(){
 		    /*alert("Show this message");*/
-		    var testButton = $(this);
-		    $.ajax({
+		    var testButton = $(this);/*aqui guardo en una variable ID del boton*/
+		    $.ajax({ /*funcion de jquery*/
 				  url: "http://bootcamp.aws.af.cm/welcome/andrescoda",
-				  context: document.body
-				}).done(function(data) {
-				
-					$('#nameTest').val(data.response);
-				  testButton.addClass( "done" );
+				  context: document.body 
+				}).done(function(data) { /*data devuelve el response de la URL*/
+					var texto = seleccionar(data.response, "andrescoda");
+					$('#highlight').html(texto); /*funcion jquery para modificar el contenido del ID hightlight*/
+					/*$('#highlight').val(texto);*//* insertar el resultado en el campo de texto */
+				  testButton.addClass( "done" );/*agrega la clase done*/
 				});
 		  });
-		console.log(data)
+		/*console.log(data)*/
+		function seleccionar(text,nombre){
+			/*console.log(text,nombre);*/
+			var inicio = text.indexOf(nombre);
+			/*console.log(inicio);*/			
+			if (inicio!=-1){ /*si encuentra el texto se cumple la condición*/
+				/*console.log(text.replace(nombre,"Eduardo"));*/
+
+				return text.replace(nombre, "<i class='highlight'>" + nombre + "</i>");
+				/* "<i class='red'>" + text.substring(inicio, inicio + nombre.length) + "</i>";*//*encontrar la palabra donde este inicio y termina en el inicio "mas" el largo*/
+			}
+			return text;
+		}
 	</script>
 
 	<!--end #background -->

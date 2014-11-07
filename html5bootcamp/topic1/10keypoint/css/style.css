@@ -57,6 +57,11 @@ body {
    background: #1b435e;
 }
 
+.highlight{
+  background: #FFFF00;
+  color: #000;
+}
+
 .textbox { 
     color: #000;
     background: transparent url(http://html-generator.weebly.com/files/theme/input-text-8.png) repeat-x; 

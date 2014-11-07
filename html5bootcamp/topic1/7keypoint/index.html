@@ -38,9 +38,9 @@
 		    $.ajax({
 				  url: "http://bootcamp.aws.af.cm/welcome/andrescoda",
 				  context: document.body
-				}).done(function() {
+				}).done(function(datos) {
 				  $( this ).addClass( "done" );
-				  console.log("test");
+				  console.log(datos);
 				});
 		  });
 	</script>
